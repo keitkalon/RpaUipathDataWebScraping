@@ -1,0 +1,905 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MazdaCX5StockOffer" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="837,9062" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Activities.System</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="67">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="VW&amp;SmartForTowOffer" sap:VirtualizedContainerService.HintSize="847,8997" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu" sap:VirtualizedContainerService.HintSize="805,8905" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="771,8689" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strTextWithNumberOfFilteredCars" />
+              <Variable x:TypeArguments="x:String" Name="strNumberOfFilteredCars" />
+              <Variable x:TypeArguments="x:String" Name="strTextWithNumberOfUnfilteredCars" />
+              <Variable x:TypeArguments="x:String" Name="strNumberOfUnfilteredCars" />
+              <Variable x:TypeArguments="x:String" Name="strEmailAddress" />
+              <Variable x:TypeArguments="x:String" Name="strEmailSubject" />
+              <Variable x:TypeArguments="x:String" Name="strMyGmail" />
+              <Variable x:TypeArguments="x:String" Name="strGmailPassword" />
+              <Variable x:TypeArguments="x:String" Name="strMyName" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtSearchResultWebScraping" />
+              <Variable x:TypeArguments="x:String" Name="strSearchResultWebScraping" />
+              <Variable x:TypeArguments="x:String" Name="strEmailBody" />
+              <Variable x:TypeArguments="x:Int32" Name="intTemp" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Căutare detaliată'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro" DesignTimeRectangle="732, 554, 196, 52" ElementType="Button" FriendlyName="'Afişare rezultate'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Afişare rezultate *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='search-btn btn btn--orange btn--l js-show-results js-track-event' /&gt;" Guid="1cbbc8c7-2714-4022-8d87-a31e3c2d96db" InformativeScreenshot="bb97802f0b22b0c76d3b059054c6ecf4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='mobile.de maşini noi și second-hand - Piața dvs. de vehicule din Europa' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="800, 630, 137, 21" ElementType="Text" FriendlyName="'Căutare detaliată'" FullSelectorArgument="&lt;webctrl aaname='Căutare detaliată' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Căutare detaliată' tag='A' type='' class='link u-pull-right js-track-event js-adjustable-dsp-link' check:innerText='Căutare detaliată' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">strTextWithNumberOfUnfilteredCars</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">strNumberOfUnfilteredCars</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">System.Text.RegularExpressions.Regex.Match(strTextWithNumberOfUnfilteredCars, @"[\d\.\,]+").Value;</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">strNumberOfUnfilteredCars.ToString()</CSharpValue>
+              </InArgument>
+            </WriteLine>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Căutare detaliată'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro" DesignTimeRectangle="800, 630, 137, 21" ElementType="Text" FriendlyName="'Căutare detaliată'" FullSelectorArgument="&lt;webctrl aaname='Căutare detaliată' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Căutare detaliată' tag='A' type='' class='link u-pull-right js-track-event js-adjustable-dsp-link' check:innerText='Căutare detaliată' /&gt;" Guid="fbffecb7-3c07-4ca9-8cfb-eca8fa09a116" ImageBase64="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" InformativeScreenshot="884139858fa5f92c875ad76c624e6dd4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='mobile.de maşini noi și second-hand - Piața dvs. de vehicule din Europa' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="911, 630, 20, 20" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;i' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='I' class='gicon-link-forward-prio-m icon--m u-margin-left-9' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVEhL7ZQxSwNREIS1slGwtrK0DdjZWVj5B1IIVgYEJY2CjY1YRIwE7AwJQbDwLySCoqJYaSd2ooiNkDRJpYw7Rsn6bt8egikEPxi47O7M3jsuN4A+878gFX9B6wk43QOqc8BGBlgc6orXrLHHGYf4gqsDYGsKWJART5zhbASZMKgXgZUxO9ASZ+kxkG7AeQXIDdpBnuihN0A6iudboJDyWNbG7TpFLzMUUlU05JiWUeuoBNwdA/lRu88MhVQUu7O2KdRFDXi4tpcwQyGVT95egaXhpCGm2jzweJNcwgyFVBR6kEqDN8XTOL7er04LWP3Bq3mYt0/ADIVUFKWZ78Mx8a6tcIoZCqko6ttJQ6iPt+gk/hYxQyEVxcs9sDlpG7/k/Q/oZYZCqgFnZWB5xA7wRA+9AdIxaOzEH4ElztJjIN0Il/tAcdoO1OIMZyPIhEO72f2AlbPA+kQvlNessccZB3/BL/DXFwDviaOUDKLHud8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Marcă'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Volkswagen" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Oricare</x:String>
+                  <x:String>Audi</x:String>
+                  <x:String>BMW</x:String>
+                  <x:String>Mercedes-Benz</x:String>
+                  <x:String>Opel</x:String>
+                  <x:String>Skoda</x:String>
+                  <x:String>Volkswagen</x:String>
+                  <x:String>───────────────</x:String>
+                  <x:String>Abarth</x:String>
+                  <x:String>AC</x:String>
+                  <x:String>Acura</x:String>
+                  <x:String>Aixam</x:String>
+                  <x:String>Alfa Romeo</x:String>
+                  <x:String>ALPINA</x:String>
+                  <x:String>Artega</x:String>
+                  <x:String>Asia Motors</x:String>
+                  <x:String>Aston Martin</x:String>
+                  <x:String>Audi</x:String>
+                  <x:String>Austin</x:String>
+                  <x:String>Austin Healey</x:String>
+                  <x:String>BAIC</x:String>
+                  <x:String>Bentley</x:String>
+                  <x:String>BMW</x:String>
+                  <x:String>Borgward</x:String>
+                  <x:String>Brilliance</x:String>
+                  <x:String>Bugatti</x:String>
+                  <x:String>Buick</x:String>
+                  <x:String>Cadillac</x:String>
+                  <x:String>Casalini</x:String>
+                  <x:String>Caterham</x:String>
+                  <x:String>Chatenet</x:String>
+                  <x:String>Chevrolet</x:String>
+                  <x:String>Chrysler</x:String>
+                  <x:String>Citroën</x:String>
+                  <x:String>Cobra</x:String>
+                  <x:String>Corvette</x:String>
+                  <x:String>Cupra</x:String>
+                  <x:String>Dacia</x:String>
+                  <x:String>Daewoo</x:String>
+                  <x:String>Daihatsu</x:String>
+                  <x:String>DeTomaso</x:String>
+                  <x:String>DFSK</x:String>
+                  <x:String>Dodge</x:String>
+                  <x:String>Donkervoort</x:String>
+                  <x:String>DS Automobiles</x:String>
+                  <x:String>Ferrari</x:String>
+                  <x:String>Fiat</x:String>
+                  <x:String>Fisker</x:String>
+                  <x:String>Ford</x:String>
+                  <x:String>GAC Gonow</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="488, 386, 303, 30" ElementType="DropDown" FriendlyName="'Volkswagen'" FullSelectorArgument="&lt;webctrl tag='SELECT' aaname='Marcă' id='makeModelVariant1Make' name='makeModelVariant1.make' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' aaname='Marcă' id='makeModelVariant1Make' name='makeModelVariant1.make' type='' class='form-control form-control--dropdown js-make-dropdown' /&gt;" Guid="d2917777-43d9-48ea-97a4-f5e8881bb10d" InformativeScreenshot="f75c4fd99ee7a53d754a7add1d322dd4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="488, 364, 40, 20" ElementType="Text" FriendlyName="'Marcă'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Marcă' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='LABEL' innertext='Marcă' class='' aaname='' check:text='Marcă' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAYCAYAAACBbx+6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKDSURBVFhH7ZW9a1pRGMb7l1yXbm7VJXS4xaHiElwEh4hDxUFwEOKUDoVAJZQICkIRoZRCkQsBlUIIQoRA3BSEOPVCwYKDkEFwuJDh6Xu+TWpuaJtbCPjAQc57znnP77wf12d4YtoCB60tcNB6wsA/ztD8WBWj70qjkDft6bX2eCmtj69Zv4pzdfVqik5rgJmcKhngcQVW6LkYiQaupJlwcfle2mkkWlNpf3x5kwbS9g7Se7tI2mFknduBY9LA3sU7Axx6habi8ob4EDXAVm0sFwKSt8RySWMl53ekgRfdHAdKJOOIsF8VSYo8m7NXc+DjobDPh/h8kEJMPSa6g2JNpXCBTkHY87UWDtNhWAWHrKTrIZr7cbxkZ0JhxN6U0J56D/gz0sCzk4y44MRBnR2SZTGq0WUs4i1ZMvriHsp2Cm+PWW1XUGZQtJ7kDzXAerBzK8qWLed2nAchFg2jzpLm689IA49qwlG+6+LyiG3eRdsdG/hJlUdaAyutZAr7sqT2vlBU1oALNL+hfTRUFq1sC9+ZjemGzlKAtTb6M/oNuPhtoes5XcghQb+8POYO8sxBqIIRO3A9QD37Qji9Ndj6Wkl0zfPUHRv7wNefkQQ2F/D0eAMc6gOyAe8AXzVEytKfpvQdIemvzP3As6+yDyhLOmoywv7+jDYDY4nzAzG3ovLAoocid5DDKTGoCyKlBkaui9OjuNjvA4w5+ZBNFXmdQnk/wz9f7E5/f0YSWNYqbRDAhNwvCQc6fbSHO8ihM6fpzzPR/cxGHV1uVNYycA8wyXMdc44NO4PmhP6MfP0Z6Rr+W3nUIJ5qoD8Rb671bhN6yN8/A/9vbYGD1hY4aG2BgxXwC0ejrsc10K1lAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'Model'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="up!" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String> Passat Alltrack</x:String>
+                  <x:String> Passat CC</x:String>
+                  <x:String> Passat Variant</x:String>
+                  <x:String>Phaeton</x:String>
+                  <x:String>Polo</x:String>
+                  <x:String>Routan</x:String>
+                  <x:String>Santana</x:String>
+                  <x:String>Scirocco</x:String>
+                  <x:String>Sharan</x:String>
+                  <x:String>T1</x:String>
+                  <x:String>T2</x:String>
+                  <x:String>T3</x:String>
+                  <x:String> T3 altele</x:String>
+                  <x:String> T3 Caravelle</x:String>
+                  <x:String> T3 Kombi</x:String>
+                  <x:String> T3 Multivan</x:String>
+                  <x:String>T4</x:String>
+                  <x:String> T4 altele</x:String>
+                  <x:String> T4 California</x:String>
+                  <x:String> T4 Caravelle</x:String>
+                  <x:String> T4 Kombi</x:String>
+                  <x:String> T4 Multivan</x:String>
+                  <x:String>T5</x:String>
+                  <x:String> T5 altele</x:String>
+                  <x:String> T5 California</x:String>
+                  <x:String> T5 Caravelle</x:String>
+                  <x:String> T5 Kombi</x:String>
+                  <x:String> T5 Multivan</x:String>
+                  <x:String> T5 Shuttle</x:String>
+                  <x:String> T5 Transporter</x:String>
+                  <x:String>T6</x:String>
+                  <x:String> T6 altele</x:String>
+                  <x:String> T6 California</x:String>
+                  <x:String> T6 Caravelle</x:String>
+                  <x:String> T6 Kombi</x:String>
+                  <x:String> T6 Multivan</x:String>
+                  <x:String> T6 Transporter</x:String>
+                  <x:String>T7 Multivan</x:String>
+                  <x:String>Taigo</x:String>
+                  <x:String>Taro</x:String>
+                  <x:String>T-Cross</x:String>
+                  <x:String>Tiguan</x:String>
+                  <x:String>Tiguan Allspace</x:String>
+                  <x:String>Touareg</x:String>
+                  <x:String>Touran</x:String>
+                  <x:String>T-Roc</x:String>
+                  <x:String>up!</x:String>
+                  <x:String>Vento</x:String>
+                  <x:String>XL1</x:String>
+                  <x:String>Altele</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="808, 382, 303, 30" ElementType="DropDown" FriendlyName="'up!'" FullSelectorArgument="&lt;webctrl id='makeModelVariant1Model' tag='SELECT' aaname='Model' isleaf='0' name='makeModelVariant1.model' /&gt;" FuzzySelectorArgument="&lt;webctrl id='makeModelVariant1Model' tag='SELECT' aaname='Model' isleaf='0' name='makeModelVariant1.model' type='' class='form-control form-control--dropdown js-model-dropdown' /&gt;" Guid="ea19278f-ea34-4447-8ef4-d89afccd84a8" InformativeScreenshot="a11c16d321c996539dab1f76e63e0627.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="808, 360, 41, 20" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' innertext='Model' isleaf='0' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='LABEL' innertext='Model' isleaf='0' class='' aaname='' check:text='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAYCAYAAABurXSEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKdSURBVFhH7VS/ayJREL6/RBs7u2gTUiSkuCONbCNsEbBQtliwEHLFkRQLghbhBANCEJtDCLJw4ErACwcJHMQi4EJAuQMFQSHFwhULKey+m7fv7Q8TZXN3QQj4weBzZt7MN/Nm9h3eIDak14UN6XXh7ZO2zSbq5xVHWqYttBxWr+HZridC+S+YXPE4uonFDMtgo68/z7lA2jJyiERjXI46gaBjtA6FnuTke3i6lTDLPI6qwxKq1bDQVnnOM1OoCAukpxcpj1gkqqL7WxgmTWQ8fQyKEZ5uJV6bdL/KHSTpg/PrdtR9AfmQF6V8nTl6YI7RtzLy7+OOPpLcRr7awehRmAn2Xc2z72Q0dHWN+3qkKYahIePG2E2jaIxJy/AS0p+Fg6FDYQGOr2hE3IsF1BtifKo8wpSKSbD/0S1IVJC0y+8nlCamzGFYg+TYibCUgixvC38SQXp6keZ3shV0ex3U1S36H0f+kllDSQcdZmhl2FnD7cQvYHQZJG3iLMl84ij+4H3BYw+nB1zHkrhNSJRuROd8kpy0GyONL0Mbtk0ybiLP7Ac1DF5OmhLe+/OtqJyoMyrBeXwQxURzaD+IEIEkivEzcA5M79IYy6SMfjhpqtpxFiRo+WQvgFjKYML5DYqObQ+nd087HaPu27gt8fPKTnsxgoUH8bekMURdEOBPSbiv8JlMVujp5hjU+MKyBcwcqf4ySWQnlvOeJmY4jv1sASf5pzPtx0jItDPGDS1qGR/lFJFkZYaRtjp8lgJVDxp7zgXveb3nZE/HYKF/nsO+M5dMiFy+hr77qSRSI73g2+nLUK9+4me3EZjhupTGjnNfxMhqaP9iX67QTv8P5nyJ3Bl4BmZfaRQIi+HjlUivFxvS68KG9LqwIb0eAH8AM2LrwFkYWJAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Expand BUTTON'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="1367, 417, 56, 32" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl aaname='Extindeţi' tag='BUTTON' isleaf='1' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Extindeţi' tag='BUTTON' isleaf='1' type='button' class='btn btn-collapse js-show-tooltip js-toggle-button js-toggle-makeModelVariants u-pull-right collapsed' /&gt;" Guid="1a496e06-1164-48f3-ac7a-1754906f1c79" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAgCAYAAABHA7voAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHQSURBVFhH7ZXLjcIwEEBTAVRAB1ABFdABNAKNcNndIx1QAWe0EgeW/0fAIVFA3DgizepZ6ygJhtXyCTgbS0+K4hlrnsdxHEn5OCt4PB5/nl5/XKr1RPBwOMh6vVasViuZTCYvDTXCZrNRtcdHRND3fVksFjKbzWQ8HstgMLACap3P57JcLpVDeASC2BOA3HA4lNFoZBXUTO00KNzJQJAWswvsBi33PE+2263sdruXhhqplZqpHUk+Lz2UIB8pAdPpVFzXVYn7/d4qqJnacUBQXzxBB/XHaqOchtpxOOkggxuJVpsSbQIHXPSICHKeTUk2gcNZQZuPpwaHuwvye6nX69JoNAI6nY4x1gSx4VxgTVPsbzxEENrtthQKBXEcR5HP56XZbBpjwxBDrM5jjb9sTpyHCQK7XqlUgmKhVqsZu8E75sKx1Wr16s5pHiqooSu5XC4ovFQqRbrCM+/0PLGtViuyxrUkIgi9Xk+KxWIgoY9s/EiWy2UVa1rjGhIT1HD5aJk4zJlybiFxQYhfQLdeJJd4iiDoC+geF8klniaYFJmgKckmMkFTkk1kgqYkm8gETUk28f8E394/BPr9LzWRBnDRXk63+ylpxnE9X9KLL9/cZ63GGVeqIwAAAABJRU5ErkJggg==" InformativeScreenshot="1f2c92f0832b261c6d6956ce68c6a67a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1129, 363, 105, 14" ElementType="Text" FriendlyName="'Descriere model'" FullSelectorArgument="&lt;webctrl aaname='Descriere model' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Descriere model' tag='SPAN' type='' class='dropdown-text' check:innerText='Descriere model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAASCAYAAABRjFBCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQnSURBVFhH7VfPaxpBFO5f0l5y81a9BA8tOSTkEvYS8FDxkOBB8BBIoCEeAoIeSgIRhCBCEaGEhUIiBSstEQLxUFAoxFOFQFJyEHJY8LDQw9f3dmZ3Z9V1E0tTLH7wDvtm3q/5ZubNPsMcM4c5aTOIOWkzCJe06wZKx4ceqZw1cXVnyglPjLsadl4tIBwr40qqZh5GByfW2jZwI1UTYXOid2BIFcMlrZPH8xcLYySE2EHTY/Qk+H6IMMeP7OL8yYP/JdzpSFprmkdbqibC5iSloy9VjDGk7dMiGTCMW7T1XcQirFuAVu7KiU8Hk/MYyI//AX+PNK9D82Jf7Hgi81LelGZPR3ZjUepfIpHT8cNe3NsGsomX0pd3bNhO287j8q6P0xR/LyB5VEY2FhJJjinQP66PDx66b6G0vYKoZRPCUrqI9j0PqFDsqzVUUiL/aIqu5n4XlbSIGV7eRKXrtguzV0NBjgnfedR76jjlK9fCsv1UHiVtUn7Tkgaziaylf40SH7brKhL8HVlH4XML9eO4FTC8VSPHBs73eO4KMnoT9fdbSMTIH9dBdkl5asPLa4i94UQ3caqQ5sg40ibG9fExoNytmCKfc/vm0A5x5WnVqj0tXMxeRPIfCVn5atRfrfFEVfSjWx1pWU9Uo3o0uVEjcZxc0/h9A5mReqUPu6ag/KYmDR0ULH0Ihe9A+4h2MX0nql26Qvka7eEkzeNMql18CIlizfOIse3COaU/kr2pLliKFuQX6VmGSHtYXK+P/tmm0OUa0qaPy4NFS5f5ojZK1371WLSBH9U1YbtaFA+hbhGr/D2UD9cjqjTRPngtdEcd3HyMC3ubZJ7h3FrCR2B+U5PmJLuJel/dkaNS6BAPrbzTB1msK2bg2iXP1PAMnzEPaUFxx/toH43OtcWbx6i9s6D2gvnko/pRbb7asYlAByMbUc4ZI5bfqUjrN/FOE07Ce7QbaDdd5hSnfvhF56fXRGFD7Mb0p5+O3epBS+5MwtBJ8/j0FBgUd7yPmw/itPDOn4zHkubm49bjnrTndPp6MvakkxaY38NJGyMaPbtvxTSTnuIa6yJr2DnWcf65indv6c6mwCa6KNHdnsxVUW81cbIniuCj7tiRRLUUdrbXsBTx9jR/0oLi+vmoyb4jc2rqqOTiWNrSh/6THkuakg/3wA2qx3kgrVAbIRrtHkzC9Wb21kd7WlB+05AW1eLIvG+hzz1Cwc2XfSTsxkwSXl5H9ox6zaCH05yaHL/w3B9J41sRSdUutov69c8HkcbwjetHGsHslpFeFifeklcrRPpwTY8njcH1qL75hVj65sY3LvJuvpFF7BTzIz4m5hdI2hSw/qMM97HhwrQaqzlEto0//f/yjzsBgylsHoigfHg8MPIj8vsj0ub4N5iTNoOYkzaDmJM2cwB+AxMqXjuX+yrmAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Marcă2'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Smart" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Maserati</x:String>
+                  <x:String>Maybach</x:String>
+                  <x:String>Mazda</x:String>
+                  <x:String>McLaren</x:String>
+                  <x:String>Mercedes-Benz</x:String>
+                  <x:String>MG</x:String>
+                  <x:String>Microcar</x:String>
+                  <x:String>MINI</x:String>
+                  <x:String>Mitsubishi</x:String>
+                  <x:String>Morgan</x:String>
+                  <x:String>Nissan</x:String>
+                  <x:String>NSU</x:String>
+                  <x:String>Oldsmobile</x:String>
+                  <x:String>Opel</x:String>
+                  <x:String>Pagani</x:String>
+                  <x:String>Peugeot</x:String>
+                  <x:String>Piaggio</x:String>
+                  <x:String>Plymouth</x:String>
+                  <x:String>Polestar</x:String>
+                  <x:String>Pontiac</x:String>
+                  <x:String>Porsche</x:String>
+                  <x:String>Proton</x:String>
+                  <x:String>Renault</x:String>
+                  <x:String>Rolls-Royce</x:String>
+                  <x:String>Rover</x:String>
+                  <x:String>Ruf</x:String>
+                  <x:String>Saab</x:String>
+                  <x:String>Santana</x:String>
+                  <x:String>Seat</x:String>
+                  <x:String>Skoda</x:String>
+                  <x:String>Smart</x:String>
+                  <x:String>speedART</x:String>
+                  <x:String>Spyker</x:String>
+                  <x:String>Ssangyong</x:String>
+                  <x:String>Subaru</x:String>
+                  <x:String>Suzuki</x:String>
+                  <x:String>Talbot</x:String>
+                  <x:String>Tata</x:String>
+                  <x:String>TECHART</x:String>
+                  <x:String>Tesla</x:String>
+                  <x:String>Toyota</x:String>
+                  <x:String>Trabant</x:String>
+                  <x:String>Triumph</x:String>
+                  <x:String>TVR</x:String>
+                  <x:String>Volkswagen</x:String>
+                  <x:String>Volvo</x:String>
+                  <x:String>Wartburg</x:String>
+                  <x:String>Westfield</x:String>
+                  <x:String>Wiesmann</x:String>
+                  <x:String>Altele</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="488, 467, 303, 30" ElementType="DropDown" FriendlyName="'Oricare'" FullSelectorArgument="&lt;webctrl id='makeModelVariant2Make' tag='SELECT' aaname='Marcă' name='makeModelVariant2.make' /&gt;" FuzzySelectorArgument="&lt;webctrl id='makeModelVariant2Make' tag='SELECT' aaname='Marcă' name='makeModelVariant2.make' type='' class='form-control form-control--dropdown js-make-dropdown' /&gt;" Guid="be5498a1-5af7-4d4d-ad3a-d3cc3d1f4583" InformativeScreenshot="571c7d57370592cce260b258aa2517cb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="488, 445, 40, 20" ElementType="Text" FriendlyName="'Marcă'" FullSelectorArgument="&lt;webctrl parentid='expandables' tag='LABEL' innertext='Marcă' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='expandables' tag='LABEL' innertext='Marcă' type='' class='' aaname='' check:text='Marcă' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAYCAYAAACBbx+6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKDSURBVFhH7ZW9a1pRGMb7l1yXbm7VJXS4xaHiElwEh4hDxUFwEOKUDoVAJZQICkIRoZRCkQsBlUIIQoRA3BSEOPVCwYKDkEFwuJDh6Xu+TWpuaJtbCPjAQc57znnP77wf12d4YtoCB60tcNB6wsA/ztD8WBWj70qjkDft6bX2eCmtj69Zv4pzdfVqik5rgJmcKhngcQVW6LkYiQaupJlwcfle2mkkWlNpf3x5kwbS9g7Se7tI2mFknduBY9LA3sU7Axx6habi8ob4EDXAVm0sFwKSt8RySWMl53ekgRfdHAdKJOOIsF8VSYo8m7NXc+DjobDPh/h8kEJMPSa6g2JNpXCBTkHY87UWDtNhWAWHrKTrIZr7cbxkZ0JhxN6U0J56D/gz0sCzk4y44MRBnR2SZTGq0WUs4i1ZMvriHsp2Cm+PWW1XUGZQtJ7kDzXAerBzK8qWLed2nAchFg2jzpLm689IA49qwlG+6+LyiG3eRdsdG/hJlUdaAyutZAr7sqT2vlBU1oALNL+hfTRUFq1sC9+ZjemGzlKAtTb6M/oNuPhtoes5XcghQb+8POYO8sxBqIIRO3A9QD37Qji9Ndj6Wkl0zfPUHRv7wNefkQQ2F/D0eAMc6gOyAe8AXzVEytKfpvQdIemvzP3As6+yDyhLOmoywv7+jDYDY4nzAzG3ovLAoocid5DDKTGoCyKlBkaui9OjuNjvA4w5+ZBNFXmdQnk/wz9f7E5/f0YSWNYqbRDAhNwvCQc6fbSHO8ihM6fpzzPR/cxGHV1uVNYycA8wyXMdc44NO4PmhP6MfP0Z6Rr+W3nUIJ5qoD8Rb671bhN6yN8/A/9vbYGD1hY4aG2BgxXwC0ejrsc10K1lAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'Model2'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="ForTwo" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="6">
+                  <x:String>Oricare</x:String>
+                  <x:String>Crossblade</x:String>
+                  <x:String>ForFour</x:String>
+                  <x:String>ForTwo</x:String>
+                  <x:String>Roadster</x:String>
+                  <x:String>Altele</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="808, 497, 303, 30" ElementType="DropDown" FriendlyName="'Oricare'" FullSelectorArgument="&lt;webctrl id='makeModelVariant2Model' tag='SELECT' name='makeModelVariant2.model' /&gt;" FuzzySelectorArgument="&lt;webctrl id='makeModelVariant2Model' tag='SELECT' name='makeModelVariant2.model' type='' class='form-control form-control--dropdown js-model-dropdown' aaname='Model' /&gt;" Guid="69816fe8-daee-45ac-b45b-ec70e77ae337" InformativeScreenshot="616c19e924159972beaa1a7324030648.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="808, 475, 41, 20" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl idx='2' parentid='expandables' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='expandables' tag='LABEL' class='' aaname='' check:innerText='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAYCAYAAABurXSEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKdSURBVFhH7VS/ayJREL6/RBs7u2gTUiSkuCONbCNsEbBQtliwEHLFkRQLghbhBANCEJtDCLJw4ErACwcJHMQi4EJAuQMFQSHFwhULKey+m7fv7Q8TZXN3QQj4weBzZt7MN/Nm9h3eIDak14UN6XXh7ZO2zSbq5xVHWqYttBxWr+HZridC+S+YXPE4uonFDMtgo68/z7lA2jJyiERjXI46gaBjtA6FnuTke3i6lTDLPI6qwxKq1bDQVnnOM1OoCAukpxcpj1gkqqL7WxgmTWQ8fQyKEZ5uJV6bdL/KHSTpg/PrdtR9AfmQF6V8nTl6YI7RtzLy7+OOPpLcRr7awehRmAn2Xc2z72Q0dHWN+3qkKYahIePG2E2jaIxJy/AS0p+Fg6FDYQGOr2hE3IsF1BtifKo8wpSKSbD/0S1IVJC0y+8nlCamzGFYg+TYibCUgixvC38SQXp6keZ3shV0ex3U1S36H0f+kllDSQcdZmhl2FnD7cQvYHQZJG3iLMl84ij+4H3BYw+nB1zHkrhNSJRuROd8kpy0GyONL0Mbtk0ybiLP7Ac1DF5OmhLe+/OtqJyoMyrBeXwQxURzaD+IEIEkivEzcA5M79IYy6SMfjhpqtpxFiRo+WQvgFjKYML5DYqObQ+nd087HaPu27gt8fPKTnsxgoUH8bekMURdEOBPSbiv8JlMVujp5hjU+MKyBcwcqf4ySWQnlvOeJmY4jv1sASf5pzPtx0jItDPGDS1qGR/lFJFkZYaRtjp8lgJVDxp7zgXveb3nZE/HYKF/nsO+M5dMiFy+hr77qSRSI73g2+nLUK9+4me3EZjhupTGjnNfxMhqaP9iX67QTv8P5nyJ3Bl4BmZfaRQIi+HjlUivFxvS68KG9LqwIb0eAH8AM2LrwFkYWJAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Data primei'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="729,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Text="2008" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/vhc:car/pg:dspcar" DesignTimeRectangle="488, 507, 69, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl class='form-control js-slider-textfield js-ignore-enterkey' tag='INPUT' type='number' aaname='' /&gt;" Guid="e00f5722-2e20-46cd-bb66-5c7dfeb04306" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAiCAYAAAATQPRFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPeSURBVGhD7Zn/axpJGIfvnx7CQpGyhMvBctSAhVqQIgVDseihSSlkCVhM6QZu/WG5CBGSlKwxggthOTYpm/i59539okYT7Vq43u0+sLA7M47zPr7vbML8goylZJJWYEbS9fU1jo6OsLe3h0ajkbqL4+b42cM0sSTu4EHHx8e4uLhAv99P3cVxc/zsYVpULIkN8oDLy0sMBgNcXV2l7uK4OX72wD4iYklsz7ZtOI6Dm5sb3N3dpe7iuDl+9sA+ImJJXJOj0Qi+72M8Hoet6YLj5vjZA/uI2mYkeZ6XWkERHD97iCQxM5I45TIgPbCPKGEySQuIJEVkkhawtiR/ZEGvlZDfVKFuaijs6LBGftj7GD7O23XUvwzD55+baUlzG/cyScN2ETmhQH1ZR6tjwuy0UH+pQhE5FNtPCXBx+EpAeW3Q3c9PckknVRKUQ7kzH6bbKcu+6knY8B8nsSSjJCDemFQ4i/BhvqH+kiH73b8+ovLBgLlfgrZZgkFe7c8VVD7bwXDCH5lolvIPStaHY+moy3YVGmWsGZeyjcOdCg4pg6vb1Ld7HjR7Noxagb4nGG/0vaB9DRJLqmwI5A+c8Gke5yAPsVFBl+6H+xrdU1m+bsL40gMXovWWJL615FjP4sxToL1rUcmaMHaLULd1OCy7UUXrxIbr2rBqPGcBh/LfKAtlQXM801D9ZML6SuY9antO66pZsF0X9p8VbG2sn9GJJfECC+3HdxS3XYAQZQollJSronsf9DETSTaavwqof4SZEDE1dkIgptyZ3Oc/TdZg725BbLdm9rnzhhpndFISS9I1gdz7Xvg0T+99DkLTZdZISeF9xERSGHiQVHM4nSryqgKh5GTJKZTB2r7MxbnPyTmpbe568N3fS2JJQQnloQ/ChmlGLRTiYJZJ6qGam82ImH4TW0LDx36UB0P54zwmqbtDc66ZNYtILAn3tOAXtKjnRTQtG943avvmwbaaKNK+IF6QlLBknpbEJUFlQvO0LoLw/Ose9IMufPkGpR9iJJuBgY78E5k0/8b14Z7QC2PRD/kdJJfE3Dsw6U2iKhRwlNqKikLNhDO1pyyTJOd5p9HfV+EctMlrtS482l3MMu0pvOlTqW2Vm6j89oQkYtguBet5psj5lN/LMP5VSTE+PHqbuH+vmeg+aXE9+A82bd9zg0xdmWA93g+qux8k6f9NJmkFMkkrkElagUzSCmSSVuBRSXyEcnt7Gz6lG/YQHSnNSOLDuNPT0/Ap3bCHhYeT0TH32dmZPHtKIxw3x88eFh5zM9zBBnkQ12TaLo6b448EcakxM5IyFpNJWsJ4PMY/Zpr5jDcFttoAAAAASUVORK5CYII=" InformativeScreenshot="afa4fdc0203f558cd815ce13278e6b42.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="488, 488, 222, 14" ElementType="Text" FriendlyName="'Data primei'" FullSelectorArgument="&lt;webctrl aaname='Data primei înmatriculari începând' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Data primei înmatriculari începând' tag='SPAN' type='' class='' check:innerText='Data primei înmatriculari începând' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOIAAAASCAYAAABGggLOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAgvSURBVHhe7VrPSxtPFP/+JXrx5q3JpXiw9FDxIrkIObTkUPEQ8BBQaKhQaUCRUMGAECQgIVBCoKAiqAgJFMyhYEBIoJBAQcEvLHhY8BDo4X3fezM7O7vZ3ST+DHz3A0OyMzsz79dn5s0k/0CIECFeHCERQ4QYAYREDBFiBKCIeHW2Bbt5vRRgv9YCoytfGGF0L3cgHp2AqS+nYMq6x0MXmvk5iIy/gtWaa/TOqbRVBZp3sm4kYcDx8isYi85BsSWr7guzAWXW+RSuZNWw8PdXB6oy/vZboxN4bYsbP1oYDQ+DxbNyw6m5IuLF9gSMjXsUdF72pyHf6o/m3hzE32PZa8iap4dxtCBkjRWgLeseDxjEKWGL2F5H1hEM2E9i3XYFivS503iwk4ZHA4pkayzFS1nliQbkMPDHxid7F5NhcVOBRY6NDbiQVcPCz1/GAdbHNmC/RJ9b0BwFLrK+byD7o4CfM5C7fJhQFs8WD5yc6iXiZg1M0wTzGle+r7QTUP0M7A64kqpxtp+PiIQuyfxUjvvbZZs4hjc7cFFvwBXthLctOK9j9vBXND0fkGDsnwnI9TN3F+3zGAZ6BCISev1lwtWvOlxcU6UB7XodmjdP5dDBYf6pw3njmn1v/sbvrcE3JS8MTkQHgbpwvj4p6tdr+GRC+2gDVmKY5rAzML1IpKAs0wjjLA2xaTnO9Ayu1Gmo/mvA+V4KEu/kOLgqv13agPNr7uKAJUP2qAa5hJxjeh4yBx1JAjvwMgVcoWgukrexId5NVtCFYqei58XSIe5WYpypZAGaRguKS695cYm8W8A0zXZ0t1OBzEfRNoZpaGK9Am2ZbvoZrycoLTnweR9tQekXj5WXu6VXO2YcmbNrTFnWIMG2o7ll2vc3yHYGVL/OwBTXo34x3Bm/noKh5liD3dIHbs81bJvYhDXgIp9U/oq8m4fVCqZemoyCaK6+Lp3N34eQW7blIH/xOK6+i9sFyMRRD/KRw186XHP1syfDRw9quq3DrpKNbLcDF7fcydYD46JaScFbmTHo7wTrZsdi9sep0A2/TyWwvzqmkGwLcmzy6yGUN0WfIYmIAfpzTdTP7kATn5v5GRQWnUw587pw9Fg0BVUU3pOIhsnnk8TnDe6T/SR32ZgYT4eSAQsHVtwiBqZUZ5RS2cqrEkBENmzcNmQkOomOmrNlTJREwP8pQYKeo/OQO6nDcV7oFUkd4mj3ISIW0l8tWG9ERuFutwhGcqGjYpq+2Tq5O8h2/Yhol14i4gK7acmG81J6i7JEdFsOSERo7UAMF7UMxUN+TSyOyl+6L2S5FxGxeNkzSI+7GmSYADNInhqSTRLZSnmVHliirzm9V3FhxWagbnos0ty2L2bzIn1sFma0diGbeL4HEZUxoqiArCIDcPpq4g7zUfTL/BTrhO84Mr0zb3H1oPbxOSj/kW0SVt8I774CV9/nxXhMClv52W91cdCndNDhWNuZlkHapTnRLhcTMvAsjyOC6WJbGChRakm9OlBeonbh8OGJOC91s2Xhvqo9Cce06mKwrPLzBKyckDZEPO19C762s+0hCEZV1hx4rqmzhXhn9SbTPBS1Yy+nrqr/gESU4FQTS7Mk/cU+tPuOJXHRI1/1+EuHa65+9gzQg8+b1IbZhfApZhffXnMdE0nrq+JQkXcSz4KyDuGtm237xHcxuZqT9apDltsnFTfoMqqcEH2GJmIz/0bUMxG60FbbuLNYA/eOgwbYnlerhV5U8Eh4BrwjMDwCj+BwrMtZCKeBEI5g0oLFo9A8wxPRDlJH3572Xn2cc/WzXRARbRn0AOb3PN+R6Glz9XXp3O2UYEVb6VXx8QXDmmNgItpyBtvThvWeV+G+bt8xnPIG6xZge2pX4y/A/o1sR/jFUiARjdoaxHgwuR0bh7DEz2mxonsYurkjBbfGudwS6dR7PKPxwuBDJoQlA+12PTviYgXTyKcgIp2Dne+74We8JydiX9vhs1wUe4LBJ8D4PUzF4/wOBol2VvfeEV1zOHS2b5RXeUd327rXFwyHv3S45OxnzwA9rr6LLIjTVC/oRLH6qh0Rz32/+unmEYu6Xl0ci9vvuyN6lNgXeXmgiDgD2ZMOtBs7sCQFtwZWV9PROVha3oJqXQZTdAGKDexzYpFbU0DClgHPdh9TsCovVuh56YjG91Ce4HDssETEVR0DnmVCmVfyFaielPg8FkcnkgkdztfxXET0tZ0dLJH4Aqxs18D0kIHecwQ495MLJp6PEstJWMTzFwet8jFdPCRhxbo0s/r6EDG2eQjtTgOK1rg+vmA4/KVjSCLy/D563KAeHJuvYHG9BMe1ChTXP8DbFC3oCKUHFjx/rnxOycsyLHyO7KdbHyLSAr+pyYbjLw11RlQFD5jJFBTreocuNPfkBQ0WuiHKfRHf1cB4jlm1FOJt+Rqq6mcQJNinLcguinalgIQy8rctWFFjoCH3em+qHH0dBhieiAT71lIUun3LHOCZEducztfw1ESE/rYza2k7dSX9PGToCXDCXQf21dhU0M6FBurbhYsdu34qmYbV91pfl87dlry9prrpedjdTovvPr5gOPylY1giInz1ELLpwc+Ey9fFz0xKjzTkNH0j8TRU5Q4ZrFs/IiJQtvInazPx4YuEIuJQ4MsDa7v1Bh1wu/rvavQ7Vp9/n7iN3DPGM0AczIN1e3b0s90A/vCF12+khAH8pYN9Jb+/CPz0INx5+NS9iAb8zvpg3Qaw5f2I+ETw3XlChHhseGRFL4mRIqLf//BChHh0PMJ/Zh8TI0XEECH+rwiJGCLEiwPgPxmfQGlSktegAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'outside'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/vhc:car/pg:dspcar" DesignTimeRectangle="1050, 485, 300, 250" FriendlyName="'var ids'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='22' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='rectangle-inline-ad-box hidden-s hidden-m' tag='DIV' aaname='' check:text='var ids = window.ads.filter(function (i) {return i.id === &amp;quot;div-gpt-ad-1579254191524-0&amp;quot;;}).map' /&gt;" Guid="a211217a-866e-4e3b-b5eb-226873a69971" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAD+CAYAAAC9blmDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVHhe7dQBDQAADMOg+ze962gCIrgBRAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwIAsgQFZAgOyBAZkCQzIEhiQJTAgS2BAlsCALIEBWQIDsgQGZAkMyBIYkCUwIEtgQJbAgCyBAVkCA7IEBmQJDMgSGJAlMCBLYECWwICo7QFn+A/vIBYRwQAAAABJRU5ErkJggg==" InformativeScreenshot="4c20bf2dfaf00f58987988da73c6d77f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1244, 422, 187, 36" ElementType="Button" FriendlyName="'Ştergere filtre'" FullSelectorArgument="&lt;webctrl aaname='Ştergere filtre categorie' idx='5' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ştergere filtre categorie' type='button' tag='BUTTON' class='btn btn--muted js-clear-btn' check:innerText='Ştergere filtre categorie' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheck Action="Check" DisplayName="Check Diesel" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/vhc:car/pg:dspcar" DesignTimeRectangle="728, 698, 21, 21" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='fuelType_DIESEL' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fuelType_DIESEL' tag='INPUT' type='checkbox' class='' aaname='Diesel' /&gt;" Guid="dbf94f21-971d-4b35-9e4a-15beec1a41b7" InformativeScreenshot="c8d8203c4a9d151d4b228276786d72e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="728, 698, 223, 22" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Diesel' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Diesel' tag='LABEL' type='' class='' check:innerText='Diesel' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOMAAAAaCAYAAABFE+udAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMwSURBVHhe7duxSxthHMbx/iXJki2bySIOioPFRbIIDpYs4hDIENChGGggQxChYEAQEYoIIoFCEgoqgQQKyVAwKOREUCgk4HDgcOhw4PD0/V0uZ6K2NDbl3tLnAwe5e/Oe05f3vcS8ARFpgTESaeJZjBcXF6hUKiiXy0MdMkfmEtHrDMRYr9dxdnaGu7s798rvkzkyV+5BRMPzYpRVTWL6U3IPrpBEw/NilG3ma1bEp+Qeci8iGo4Xozz3jcoo70X0v2CMRJrwKcYOqtsfsdN37JUaaFvucM9tE4fbBbTu3fNRs+T++zh9+neJfOBTjE3kgyHMpjJejNnkOCLROWQrHfc9yuUuYura3qV7Pmo3BSwHl1C8cc+JfORrjMsl0z3vsr7lEAu+Rb5pu1f+MsZIGtEqRtHankIgUYAz8mwbaaJVymF1cQ4LKzkUz/vm31/jaDOBBTW2ulnGVd/W0zovIL+i5iwmkC814Q0xRtKIdjFCrY6BYA6n8noglg6KqTBi6yo004JpFJCOhZGuSFo26utqbLMB0zJxdZzDhnMdaJeWEIllcHRtwjINFD+8RWTtpBskYySN6BdjU2JMoSq19MViNzKIzG6h1X2Xw/6aQWBxH22VVnUt5MRoPbiDwm5gIzqFHcM9F3YN2eAcDr+r14yRNKJdjKZayQK96Ppica6rOc8PdxXtnCAbH0MgOo742j5aXswvzQmp59LB+xP5Ta8Y79VKNhtC/OC6e94f4xcVo7MK/pp9292KBmQrapaR7K2CL2GMpBF/YzwwYFmWOtRzXm0Ly5MhTKyUH4Prj+X2BOloGMnPj1992DcNVA355LWD6ic1z/0Q1q69RyBVhnpKVNvXMCKpAtq97avdQb1mqKdMhTGSRnyN8XHbGMb0QgL5YxWn+w7Hk1hsYxfJmTACk+OYjqpw4ykcOjGaqG/OY0LuM6O2qpPvsOdcV+4N7Ml3mMExNSZz55EuMEbSjxfjv/SP4raspm5rAx5stcq+NKDYsgL/ZIxIA16M/AkVkb+8GAV/XEzkn4EYhaxqss2U575hDpnDFZHo9Z7FSET+YIxEmmCMRJpgjERaAH4A1GeV9VcQFEEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NCheck Action="Check" DisplayName="Check Electric" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/vhc:car/pg:dspcar" DesignTimeRectangle="969, 698, 21, 21" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='fuelType_ELECTRICITY' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fuelType_ELECTRICITY' tag='INPUT' type='checkbox' class='' aaname='Electric' /&gt;" Guid="49bc5b88-d634-46e4-9689-e867bc468f86" InformativeScreenshot="79434473d2733821a5866529b774400d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="969, 698, 223, 22" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Electric' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Electric' tag='LABEL' type='' class='' check:innerText='Electric' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOMAAAAaCAYAAABFE+udAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVHhe7du/SxthGAfw/iVmccvWdCkOikOlS3ARHAQXcThwKNihRKiQwUEQDAhFhCJZ5KCgWawEkukcBI8IiUMNBBJwuO3Q4cDh2/e5XK535ocm1dyVfj/wgm/euydZvjzPEfMGRBQLDCNRTHSF8fr6GsViEYVCYagl98i9RDSaUBgNw0ClUsHd3Z33yvPJPXKv1CCi4flhlK4mYfpbUoMdkmh4fhhlzBylIz4mNaQWEQ3HD6M8972Ul6xF9L9gGIliIpIw2mYe+992Hq08Lm05baGk9qWGe+mrcj/Hjxocb08UpUjCaJ2sYCKh4fD8HIa/TFhuKkzkEpPIme6lo2ucqYCfoelte7n5PofU4gFuvD1RlCIM4xYuvX3YC4XR3BrwHkTx80+E0b7SkVtPY3FJQ+7EhDvNdjxYMPRNfF5KYzWzg2PTanfFzIJ6jwVsyAhcbMlMiiM1ChsXOrJaGttluz2m6oF6vWoRjUmEYfSC4q/OSBkOY1Ndm5rfxGndgm3VcPxVjZaZs3aA7tW185OY0vZwKqNuOY/soobTX3UYeU29hzcK19XVtzpWE0lMLX/BUbmM6q33OTQdbuT61WIeaUziHUbnHNvvZrBfcw/anDKyiTSOGiqouup+S32e+R6PqW4Yw7WCYRxYi2gM4j2mugGaVNd2Lzm/3FV/7wbm2aCeYVzBseqIHcEwDqxFNAbxDqNVwJrXBXupHsxgYr0QfobsGDKMA2sRjUGEYdxEybZhB5bzIKeBMKpolDJJpD7paLpnitNSz3Ped4ONPJYTc9j4WW/vH2xUTwqoyqa2h48SvpYcKE+EcWAtojGIMIzhsbMzeobDqNzXcLj2HqnEW8x+SGJiWj1r6n++qLcv9rA63amRxOzaAar3clLD/rz3uoyfT4VR6V+L6PX5YYz9P4o70j37tylHumvXsdPuuN7uuXrXInpdfhj5EyqiaPlhFPxxMVF0QmEU0tVkzJTnvmGW3MOOSDS6rjASUTQYRqKYYBiJYoJhJIoF4DdJ43eNNUh/wQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Importaţi maşini din'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/vhc:car/pg:dspcar" DesignTimeRectangle="497, 600, 188, 14" FriendlyName="'Oricare'" FullSelectorArgument="&lt;webctrl aaname='Oricare' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' tag='SPAN' class='filter-option pull-left' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Oricare' type='' tag='SPAN' class='filter-option pull-left' check:text='Oricare' /&gt;" Guid="37c714de-474e-48ab-892f-3c9e47b44c36" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAYAAADN5B7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA6SURBVChTY/hPIiBfQ3//xP9y8ipYMUgOBlBswKYJWTEIYDgJWRO6YhDA6geQQmyKQYB8TxMH/v8HAN+pVNA5FxUzAAAAAElFTkSuQmCC" InformativeScreenshot="dceb252fd37bdc9f7634b0613f94f078.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="488, 574, 128, 14" ElementType="Text" FriendlyName="'Importaţi maşini din'" FullSelectorArgument="&lt;webctrl aaname='Importaţi maşini din' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Importaţi maşini din' tag='SPAN' type='' class='' check:innerText='Importaţi maşini din' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAASCAYAAACae3b5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUOSURBVGhD7Vm9a2JZFN+/JDbp7EabIUWWFAk2YhOwmPAasRAsBIUJsQgTiCxhAwYEVwIiwjAIA44EEglECMRiIUIgwkKyBAxk4UGKBykeTPHbc7/eh/qicXQyM/iDC777zn33fPzuOecmv2GOORyYE2IOF+aEmMMFixC9032UijRO7+XML4aHBjLLiwhED3Etp74vTFwXwwj43iDbMuTcc3ihvNHBJxa/YhM99jyhvRYhLvOLWPDRyHfkzI+D63IY0Xc0yuPq1kGFydOoXMmpq31yLtkX3MTZOPGYOnQcp4SPI+VbOfccXij/UEOc2efL4ZI9T2jvT0GIl+vWwQF3ziIOHEtMw4DxJB9eA19NGKSDKR9H4iXy/YQgTGKvByF01BPiOV5toJJ4w38vJSj96F1Ukm85+wKrMVS6Ut1OTqz/s4GL/DqW2G9Kd9puDTeWUiZuTnJIrvqFbPAtkvmG/V59w7eNUnWDfyP31yYilPr4/PIanXpi/H86LsopaOo7Pj9Wkjlc8Gqn4+zDmtyfdI5QpvjQhD7EYQIvt9X4p4GDtL3HwvI6srWuFTize+i2sdgGO6TKx/EvOj3ZpN373MROVMgvaQVcSn+45d0wb2vY0YSuXLejQ7d9ffbqX2JcdoHsOi4L3zLdMkfuFmEkIbizo7bxgaCfFAjbQdKqomZZwaTBAxfGSlCu2Wpyh/RIKZ7GiCgReq++EYgP+YYcQwmhGzhOE9m2crzv2XvPai29jxSoXk5OiLFt7RYQoSDs8Jq9jTh/70f2lFnZRSlEz8F1HJy0UM/HsJKq0S7ehBD+sPcNFbtsF29CPDaRVb4l/aKOtSMJodZYhymB40e2QGAkIZRyN9WweB9iTieQU0L8g1IBFczgNi7Uib+rQuMyMRzr5ABuhB875/IsPbWxx5xHczy1W4T4HXttWfi+9uvmgEypBjloh68L49MdezGkZIxBiLFtleApmcZ1dV3I77YoS6i91yhrtHHjcLYXIbSPokewT/EwAtnofd4QcoqgBPN8Wx62EYSw4qPi4S6ro0uGVKZf2QEHq2Cq9xyOwJwq+RjqD/J1/z4WIdyOHyQElQyrLLmHMG4yQoxrq3lbRcY6YY7B5U0KWMKhm59nKBY4L0JYOvb50IsQg/4g9NvnRQgrPrbdsyVEiJ4HMsQG6v+25Cmm0/93f4ZYFFnDgxDXBel85QDVQb+jOs8/1e/cIeyfGiHs7j97IrLYoLMJpoFep4pshMlSBqTbzrQI0fsoM9gkGeK7E4JGYJWarC2qnarOpRq0hu7VhTUhQ82Mlk7YTWFkXwTWgxD6kdw7GEYyvY+ztrpSUTPVuaVGdRsRvk4ZZwctEI0hk2/BmAEhIn9QQ3xLV9yUtIPJs/q+HEamWCM9qfnUmOw6L2XTIoR90FiPlCBfO7OltO+HIUQ8Rx246H7Z4N26yhi08rJoE4WdnJUkddWqznoQgjdRqrHjJeeeGkfZSLJvvKfGMi7eK+OM1qbtJKbz1AhBp5FuEaKRpEE3jFJ+05Z/bKMkbyZ8jhrGeFncQKZGCIJxnoOmdGC3hULObd+3EuKb0WcMnp67A8tmUFaOccGaOJOaTAuUlp/dQ79H707nN5xZgOsjfw+ASJwhsoqbx+zwrA4TYHaEeG1QWo0yfdKNmRHCGyYudqmM8Gvwz4XpEeKuKf4XUuu8QgAGYV7VuD519YezOcbC9Agxxy+BOSHmcAD4HwO+qQ8Mj6c7AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Germania'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="509, 633, 54, 19" ElementType="Text" FriendlyName="'Germania'" FullSelectorArgument="&lt;webctrl aaname='Germania' tag='SPAN' innertext='Germania' parentclass='dropdown-menu inner' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Germania' tag='SPAN' innertext='Germania' parentclass='dropdown-menu inner' type='' class='text' check:text='Germania' /&gt;" Guid="cf65acdf-8e5a-4439-bf43-ebe7a11effc0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAXCAYAAABaiVzAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALPSURBVFhH7VW/a9tAFO7/dJOGgMBgyKBJXiwIWFOyWBCol5gsphA0GBOo8RA8FFGoCARl8pRCQV2SIShQUKA4kwaDICDwIDB8fSedZMmx3fxYguMPDuneOz297/26T/gg2BLdNGyJbhrKRKdjOCc6qjsMjPElQz+2cB0K/btCjOuuDPmLi0hI1mFOdOqhp0rQui6CqZDFAbxvLcj1IfxYyN4Rolsb9s3zspAT9c8USEdXy6MzE88MsxjRY0SrwF7I4vxJsimd4UGL+Vkh4+Dy4p4jt7kgX7CRvGfIdAJxtOSMgCDqY6gwmL//n7b4r43WroZ2t4/ekUbZ7sPjhicODKbhYL+Kal2HdQ94p1T+TQMtVYOmymBqH6OLFmp8vytBOnQQcFIPNnRVz21Kqgn3Mfld2cZeDTKrYUi2c92pR28R3JMaap9N9AcmDioS9PNxekhAEKWypZ7s3aa7BHcWGebG02XdkWxGAVEV9G7mAeGVoJz5gihD59dclzjSsDHmZGZjWHsM0olL3UWYuuhQYOwHviHkWYzJaQbtR+poyUaypwANOLkiUUKxCihwGqNgFfK2OqN5Kfmw90UQRNbaX/sUObGOdYq4gzDRGXAm6eccJUcQwmkyGJdZT5WDG946sLi9bht6Zf5d2QaduzSW66Ix3PPUJ/OwCmnBl2f0aOrgnGgbo0D0QrYiCtAbiCbONy34k7Q/V5IhLNXFZEtRYP4MUl8S2yuIlqZulljKavjHhrEjoc9LFwHshgTjIkjUCSY+xryf3kDUG1A55uf4taG8jGg4Kv87eOrLnChH5Cf3qEwOpPcog9xowyqO8OAKnTo5RgOJDxi5YcK5pzp4S+kGI7RogFTrGvSmiWH34GVEKTjegIZYpUbzREfr+5D6fx3RDFl/Flr2CfhoX6d/BeLidfUa8CtohYnlRDcQW6Kbhi3RTcOW6KbhgxAF/gFcBIuHxpYY4wAAAABJRU5ErkJggg==" InformativeScreenshot="24ea7d3a7f178050466c1d908d4e10d9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Afişare rezultate'" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar" DesignTimeRectangle="1314, 122, 127, 30" ElementType="Button" FriendlyName="'Afişare rezultate'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Afişare rezultate' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Afişare rezultate' class='btn btn--orange btn--s u-pull-right js-show-results js-track-event' check:text='Afişare rezultate' /&gt;" Guid="029dec17-637b-42c6-bc7f-c65718e1fcbe" ImageBase64="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" InformativeScreenshot="5deef214b6d0cf6963fb1f887e6b6c60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Căutare automobil pe mobile.de/ro – găsiţi vehicule rapid şi simplu' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="479, 122, 136, 30" ElementType="Button" FriendlyName="'Resetare formular'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn btn--muted btn--s js-clear-all-btn u-margin-bottom-9' aaname='Resetare formular' check:innerText='Resetare formular' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="729,676" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,511" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NGetText DisplayName="Get Text '2.385 Rezultate'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/automobil/mazda-cx-5/vhc:car,ms1:16800_33_,frn:2012,frx:2018,mlx:100000,vcg:" DesignTimeRectangle="736, 293, 696, 28" ElementType="Text" FriendlyName="'2.385 Rezultate'" FullSelectorArgument="&lt;webctrl tag='H1' aaname='*Rezultate căutare: Mazda CX-5 Automobil pe mobile.de' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='h2 u-text-orange' /&gt;" Guid="505da707-4d88-4d5c-8507-5d06886df3c7" InformativeScreenshot="ccaf2060395a11232a03c1a8205b7d04.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mazda CX-5 second-hand | Automobil second-hand | mobile.de' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="736, 330, 121, 30" ElementType="Button" FriendlyName="'Salvare căutare'" FullSelectorArgument="&lt;webctrl aaname='Salvare căutare' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Salvare căutare' tag='BUTTON' type='button' class='btn btn--muted btn--s js-savesearch-button js-track-event hidden-s' check:innerText='Salvare căutare' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">strTextWithNumberOfFilteredCars</CSharpReference>
+                      </OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">strNumberOfFilteredCars</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">System.Text.RegularExpressions.Regex.Match(strTextWithNumberOfFilteredCars, @"^[\d\.\,]+").Value;</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">" The number of Finds is "+strNumberOfFilteredCars.ToString()</CSharpValue>
+                    </InArgument>
+                  </WriteLine>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <ui:InterruptibleDoWhile.Condition>
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">strNumberOfFilteredCars == strNumberOfUnfilteredCars</CSharpValue>
+              </ui:InterruptibleDoWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+            <uix:NClick ClickType="Single" DisplayName="Click '50' - records per page" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/automobil/mazda-cx-5/vhc:car,ms1:16800_33_,frn:2012,frx:2018,mlx:100000,vcg:" DesignTimeRectangle="1388, 887, 40, 30" ElementType="Text" FriendlyName="'50'" FullSelectorArgument="&lt;webctrl aaname='50' tag='A' innertext='50' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='50' tag='A' innertext='50' type='' class='pagination-number btn btn--muted btn--s' check:text='50' /&gt;" Guid="e0deecf3-ed44-494f-8038-4d7f4827a239" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAiCAYAAAAkjjtxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKJSURBVFhH7ZjPa9pgGMf3P+UkFAaFHgae6qUyWG9lsDBYGayn7VLZIXjRixRKD8PDiIfhyV0qlHgYmZR4SRQJKEQLASVQ9fhdnsS8vv6qlsVFmV/4HnzzvO/7eR+f54XkBXZMuw/c7/fRbDZRq9WgaVokpr2JgVhmNQXcaDRQr9dh2zaGwyFGo1Ekpr2JgViIiRcDptMYhoHBYLBwkShMLMTEZ5oB00noVIsmRmli4rPMgKluoiyDZSYmYgvEgKnYF03YBhNboD3wJvy/ApsoZTPIzPqnORVn3eWR+pBE8vUZLrJFaDa/xnoOB7glQxQECLNOq+MYB2o6Mf/8+AtKrZm1Vjgc4N8ZxFyA+NWSefc5xAnwQET+3obT0yG/j3nQsa8KnEVzljgUYOuH6G1+fn0L5U6BalhwHifPtau4D8cy7trII0mHEFK4dSaxqxwKsJr1s8U7duL+3SY9t1H65I+JBYubp0LyYkXIzyiLUIBHLQVyQYX5YMNuaZA/j+v1YxH2yIL8btuAZ23KOPNgJKjubzXtAye/6ZMY1qgXKD3jtggFWC8Xofe4MbcJ/SbLeMBOOeUBC3EJyjjO/O7XvfAmDzOYt4b/Hti48ZvnMIHzS/fuvRRxdECZE5AIbo1HDbljf4zikidH3q0iCAlIv5z5NZ9wKBm2KjmIr7jGOzxFqqBPX1eWgtzbl1MxUpmv6fUcCjBzz226hxUZWyfmCYcL/A+8B96098Cb9kLgnXsJ1XV9a1/ziS0QA26321v7IYXYAjFgSj19GqpWq+h2u5GC097EQCzERGyBGDDJcRwGXalUoChKJKa9A1hi4jUFTKLTUN10Oh1YlhWJaW9i4DMbaA54uwX8AeL22m0rklxvAAAAAElFTkSuQmCC" InformativeScreenshot="e2e56f940ee0721808e6e37892ae025d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='* mobile.de' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1151, 897, 132, 14" ElementType="Text" FriendlyName="'Rezultate pe pagină'" FullSelectorArgument="&lt;webctrl aaname='Rezultate pe pagină:' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Rezultate pe pagină:' tag='SPAN' type='' class='u-margin-right-9' check:innerText='Rezultate pe pagină:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset X="-5" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Nume'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='AnFabricatie'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Pret'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator=',' ThousandsSeparator='.' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="729,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" InteractionMode="HardwareEvents" MaximumResults="0" ScopeIdentifier="655c2227-2469-460d-b02a-b0036ae6cbcf" Version="V1">
+              <uix:NExtractData.DataTable>
+                <InOutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">dtSearchResultWebScraping</CSharpReference>
+                </InOutArgument>
+              </uix:NExtractData.DataTable>
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/automobil/volkswagen-up%21-smart-fortwo/vhc:car,cnt:de,pgn:24,pgs:50,ms1:25200_11_,ms2:23000_4_,frn:2008,ful:diesel!electricity" DesignTimeRectangle="1106, 892, 12, 12" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl class='gicon-next-s icon--xs icon--right u-no-margin' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gicon-next-s icon--xs icon--right u-no-margin' tag='I' type='' aaname='' /&gt;" Guid="82bdd7c4-991d-4170-8b12-692e9177d60f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVDhPtZAxCgAwCMR8qC/zo46W62q1B+KQpZBgT9w9JuwEVDXMLL2/SAGIInJhIuUFbKTcgI20IzKRNgB+kd3A6AujEVkZpAAEVgblBYwM2hEZhgGPA5LjiN4dsU0BAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Volkswagen up!, Smart ForTwo second-hand | Automobil second-hand | mobile.de' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1151, 893, 132, 14" ElementType="Text" FriendlyName="'Rezultate pe pagină'" FullSelectorArgument="&lt;webctrl aaname='Rezultate pe pagină:' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Rezultate pe pagină:' tag='SPAN' type='' class='u-margin-right-9' check:innerText='Rezultate pe pagină:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mobile.de/ro/automobil/volkswagen-up%21-smart-fortwo/vhc:car,cnt:de,pgn:24,pgs:50,ms1:25200_11_,ms2:23000_4_,frn:2008,ful:diesel!electricity" DesignTimeRectangle="727, -7920, 714, 16683" FriendlyName="'var ids'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div' tag='DIV' /&gt;" Guid="b928522c-2f43-4d53-b1b7-c7f633374256" InformativeScreenshot="e9f1bede74e0c92bd26157807276d5ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Volkswagen up!, Smart ForTwo second-hand | Automobil second-hand | mobile.de' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Kilometraj" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="729,185" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+              <ui:AddDataColumn.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">dtSearchResultWebScraping</CSharpValue>
+                </InArgument>
+              </ui:AddDataColumn.DataTable>
+            </ui:AddDataColumn>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Finish the site data collecting" />
+            <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="729,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
+              <ui:OutputDataTable.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">dtSearchResultWebScraping</CSharpValue>
+                </InArgument>
+              </ui:OutputDataTable.DataTable>
+              <ui:OutputDataTable.Text>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">strSearchResultWebScraping</CSharpReference>
+                </OutArgument>
+              </ui:OutputDataTable.Text>
+            </ui:OutputDataTable>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="WriteLine_17">
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">strSearchResultWebScraping</CSharpValue>
+              </InArgument>
+            </WriteLine>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="729,1282" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="For Each Sequence" sap:VirtualizedContainerService.HintSize="695,1166" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="653,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="First condition" />
+                    <If sap:VirtualizedContainerService.HintSize="653,415" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">!System.Text.RegularExpressions.Regex.IsMatch(row.Field&lt;String&gt;("AnFabricatie"), @"\d+?\.?\d+ km")</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="if first condition true" />
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_13">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">
+                                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">row["Kilometraj"]</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">row.Field&lt;String&gt;("AnFabricatie").Contains("/") ? row.Field&lt;String&gt;("AnFabricatie").Substring(8).Replace(".","").Replace("km", "") : row.Field&lt;String&gt;("AnFabricatie").Contains(",") ? row.Field&lt;String&gt;("AnFabricatie").Substring(row.Field&lt;String&gt;("AnFabricatie").IndexOf(",")+1).Replace("km","") : row.Field&lt;String&gt;("AnFabricatie")</CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="if first condition false" />
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_16">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">
+                                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_43">row["Kilometraj"]</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">""</CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="653,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Second condition" />
+                    <If sap:VirtualizedContainerService.HintSize="653,415" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">System.Text.RegularExpressions.Regex.IsMatch(row.Field&lt;String&gt;("AnFabricatie"), @"\d{2}\/\d{4}")</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="if secondcondition True" />
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">
+                                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">row["AnFabricatie"]</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">System.Text.RegularExpressions.Regex.Match(row.Field&lt;String&gt;("AnFabricatie"), @"\d{2}/\d{4}").Value.Substring(3);</CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="If second condition False" />
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_15">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">
+                                <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">row["AnFabricatie"]</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">row.Field&lt;String&gt;("AnFabricatie").Contains(",")?row.Field&lt;String&gt;("AnFabricatie").Replace(row.Field&lt;String&gt;("AnFabricatie").Substring(row.Field&lt;String&gt;("AnFabricatie").IndexOf(",")),""): ""</CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <ui:ForEachRow.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">dtSearchResultWebScraping</CSharpValue>
+                </InArgument>
+              </ui:ForEachRow.DataTable>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Enter in Filter" />
+            <Assign DisplayName="Filter the Data" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="Assign_14">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">dtSearchResultWebScraping</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116" xml:space="preserve">dtSearchResultWebScraping.AsEnumerable().Where(row=&gt; Int32.TryParse(row.Field&lt;String&gt;("AnFabricatie"), out intTemp) &amp;&amp; intTemp&gt;2008 &amp;&amp; row.Field&lt;Decimal&gt;("Pret") &gt;10000  &amp;&amp;  row.Field&lt;Decimal&gt;("Pret") &lt; 15000).CopyToDataTable()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="enter in Sorting" />
+            <Assign DisplayName="Sort the Data" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_44">dtSearchResultWebScraping</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">dtSearchResultWebScraping.AsEnumerable().OrderBy(row=&gt; row.Field&lt;Decimal&gt;("Pret")).CopyToDataTable()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="729,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Prewrite the Excell Sheet" />
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="729,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="VW_Up&amp;SmartForTwo_listFromMobileSite.xlsx">
+              <ui:WriteRange.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">dtSearchResultWebScraping</CSharpValue>
+                </InArgument>
+              </ui:WriteRange.DataTable>
+            </ui:WriteRange>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="729,84" sap2010:WorkflowViewState.IdRef="MessageBox_3">
+              <ui:MessageBox.Text>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"Web scraping complete"</CSharpValue>
+                </InArgument>
+              </ui:MessageBox.Text>
+            </ui:MessageBox>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="729,84" sap2010:WorkflowViewState.IdRef="MessageBox_5">
+              <ui:MessageBox.Text>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">"initiate mail"</CSharpValue>
+                </InArgument>
+              </ui:MessageBox.Text>
+            </ui:MessageBox>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="729,1705" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,1627" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Your Name" Title="Mail with WV&amp;Smart webscraping file">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">strMyName</CSharpReference>
+                      </OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="From what gmail address to" Title="Mail with WV&amp;Smart webscraping file">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">strMyGmail</CSharpReference>
+                      </OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Email to:  " Title="Mail with WV&amp;Smart webscraping file">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">strEmailAddress</CSharpReference>
+                      </OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Subject" Title="Mail with WV&amp;Smart webscraping file">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">strEmailSubject</CSharpReference>
+                      </OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="Body" Title="Mail with WV&amp;Smart webscraping file">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">strEmailBody</CSharpReference>
+                      </OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Bcc="keitkalon@gmail.com" DisplayName="Send SMTP Mail Message" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="hnmuweuumgvxzacp" Port="465" SecureConnection="Auto" Server="smtp.gmail.com">
+                    <ui:SendMail.Body>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_115">strEmailBody</CSharpValue>
+                      </InArgument>
+                    </ui:SendMail.Body>
+                    <ui:SendMail.Email>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">strMyGmail</CSharpValue>
+                      </InArgument>
+                    </ui:SendMail.Email>
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String">VW_Up&amp;SmartForTwo_listFromMobileSite.xlsx</Literal>
+                        </InArgument>
+                      </scg:List>
+                    </ui:SendMail.Files>
+                    <ui:SendMail.From>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">strMyGmail</CSharpValue>
+                      </InArgument>
+                    </ui:SendMail.From>
+                    <ui:SendMail.Name>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">strMyName</CSharpValue>
+                      </InArgument>
+                    </ui:SendMail.Name>
+                    <ui:SendMail.Subject>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">strEmailSubject</CSharpValue>
+                      </InArgument>
+                    </ui:SendMail.Subject>
+                    <ui:SendMail.To>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">strEmailAddress</CSharpValue>
+                      </InArgument>
+                    </ui:SendMail.To>
+                  </ui:SendMail>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVuSURBVGhD7Zp9TJVVHMcxlbLSUqdwuUBFaK2tInS9mEaI2R/Ei0FNttoaiFzX7gZhc1qrMLg4mBdwtph/NcXRpsLWTArSmpWLiSixBUgQyNugAOMdCk7f78Hnjnufc9HWuo9/3Gf73F3uOc893+/v/M55Hp7f9XFzLAALwWJwJ1gC7jaAu4AvWATuANQ178EO7Ejh94KVseGhob8eTMrrL0qoul4Q+9N1e0w1afvu5GdNTU2HXLl69eq8qM4hDQ0NksbGxqLLly9nVVZW7rDb7ZugwQ/cDxhEzYjy0KLOjst/3J9oGc3d1C2sS2fETh/hysTPX4nx8XHJxMSEg8nJSQdTU1OSuZ/N7audT8bGxhyMjo5KRkZGREdHR01paWkyNPmDpYDB1c2EJp4dAnvyY86JXYt1oufiKQNkeHh4pqKiohDa1oIVgCacZoLimXNBrbkxZ1SCXfGkgRsmRHFxcRY00gQDzXSSM8EXLtSV1q1h8TNvL1EKdsUIA729vUPBwcEvQasJMNXlLGipE9qW/XKdSqwKIwyQrKysQ9D6ONBSSb6sAutGPwgbVYlVYZQB7E610BoBzIDbrHzhH5F/vWueVolVYZSB9vb2YWiNA2vAPUAu3hDwirAsUopVYZSBwcHBGWh9EzCN7gPSBVf2qyqh7jDKwNDQkIDWFPAUWA7kFfcRkKgS6g6DDewE6wAXsmMGElRC3eFqoOTYsVlKSiR1dXVSfO2lSyI/L08kJW0XiQkJ4pPDhwVuGZwM1NbWiqKiQvH6a4liW3yc2Ld3r8AtxXwG0sB64DDABfGfUsjfb7UTBQV2UXbqlAgKNOvazAEmUV1dLc89eeKErp2sXRMqvj137pYMcBGHgm0qoe64mYEtUVEiwOSv+1xj4/MbRE1NjQgJeUjZTqI2b/5XBuJVQt1xMwMaNBEcFKhs0z43mwMwKwG6dnLhwgXjDOyypAncQovu7i6Rkpys7JORkS5aW1tES0uLXCOu7bgTNcaAyd9PCtd2oaqqKl2fQES+v79ffgd3n88h1rWP3X7QGAORkS86baPXrl3T9YmLjXV8Bw3UXbmi62PLyTHGQOqOFCcDnZ2duj7vZGQ4Gaivr9f18Rpwh9cA8BrwGvAa8BrwGvAauG0MHMjNneXALOXlZU4GBgYGZtu0fuDL06edDHR1dYpcm03YbDmzQPzZs994xoAGxWrMNaAxt692vmZA4xb+qfcauE0NWBYqxaowygDW0jS0qg38nemnrMaoMMpAc3PzCLTqDDwM4ro/3PCnSqwKowycP3++F1q1J3Py0SINyIe7JZaIiyqxKowykJ+fXwetrJmFARb/5OP1IBD14KplBdPpK24pjYww0NfXN20ymUqgdTt4DCwDssDBUuYzYPfR1I1NKsGuGGHAarU2QONBEA2YNcweWSzjc/ZHwRug8Ov0F34XaQuUwjU8aYBX8czMzE5oKwW7wXOAdTLW9mShjGnEWdgILODT/YlP/zbw3hNuKzaeMNDT0zNz/PjxkfDw8F+gieLfB6zOcNNh+jD48uAb1gm4nW4FVnAEnIlZH9KQl/Rs3xfWiKHvd0eM/XCDwx9lDubk5PS7YrPZ5kV1DsnOzpbg/R979uzpi46ObvP19b0IDZXgKNgHEgELGysBo+8oeGs/L+C+ymLHZsCZ+BgUA7o/CcpA+f8Mx+BYHJNBtAEGlHn/JGDqMGNYXXU66IY/rOB6CAR0ugUkgLdAKuAFxBNwLI7JiLMuzIvWA4ABpngG3BH9uYc2Eyx6sPQaDLi46Twc8Is8AcfimBybwlcDpjgD7Fa8drCR00MjrIazCM4LBq96jIAn4Fgck2NTA4VTk4twH59/AGOSJMrz6+IlAAAAAElFTkSuQmCC" InformativeScreenshot="de63aa7ae95c949c4d6eab020bb6d851.png" Selector="&lt;html app='chrome.exe' url='https://www.mobile.de/ro' /&gt;" Url="https://www.mobile.de/ro" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
